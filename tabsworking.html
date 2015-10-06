@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+
+
+.slideshow1 {
+  
+  overflow: hidden;
+}
+.slider1 {
+  background-image: url("clouds100.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 500%;
+  -webkit-animation: slideshow 40s linear infinite;
+  -moz-animation:    slideshow 40s linear infinite;
+}
+.container3 {
+   position: absolute;
+    margin: 10px;
+    padding: 5px;
+    border: 0px solid #0000ff;
+    height: auto;
+    width: auto;
+    float: right;
+    text-align: center;
+    z-index: 50;
+    
+ }
+
+#containermov{
+position: absolute;
+  left: 700px;
+  top: 100px;
+ -webkit-animation: containermov 20s linear infinite;
+   
+}
+
+#containermov1{
+position: absolute;
+  left: 400px;
+  top: 200px;
+ -webkit-animation: containermov1 20s linear infinite;
+   
+}
+
+#miss1{
+position: absolute;
+  left: 400px;
+  top: 200px;
+ -webkit-animation: miss1 20s linear infinite;
+   
+}
+
+.tabs {
+  position: relative;   
+  min-height: 200px; /* This part sucks */
+  clear: both;
+  margin: 25px 0;
+}
+.tab {
+  float: left;
+  
+}
+.tab label {
+  ddisplay: block;
+	          padding: 10px 20px;
+	          border-radius: 2px 2px 0 0;
+	          color: #693B8D;
+	          font-size: 24px;
+	          font-weight: normal;
+	          font-family: 'Roboto', helveti;
+	          background: rgba(255,255,255,0.2);
+	          cursor: pointer;
+	          position: relative;
+	          top: 3px;
+	          -webkit-transition: all 0.2s ease-in-out;
+	          -moz-transition: all 0.2s ease-in-out;
+	          -o-transition: all 0.2s ease-in-out;
+	          transition: all 0.2s ease-in-out;
+	          z-index: 100;
+			  
+			  
+			  
+			  
+			  
+			  
+}
+.tab [type=radio] {
+  display: none;   
+}
+.content {
+  position: absolute;
+  top: 28px;
+  left: 0;
+
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  opacity: 0.0;
+  filter: alpha(opacity=0); /* For IE8 and earlier */
+}
+[type=radio]:checked ~ label {
+ 
+}
+[type=radio]:checked ~ label ~ .content {
+	opacity: 0.7;
+  filter: alpha(opacity=70); /* For IE8 and earlier */		
+  z-index: 1;
+}
+
+
+#fly{
+  top: 300px;
+  left: 750px;
+  position: absolute;
+ -webkit-animation: fly 7s linear infinite; 
+}
+
+
+#myDIV{
+    width:1500px ;
+    height:600px ;
+    position: absolute;
+    background-image: url('clouds100.png');
+    background-position: top left;
+    -webkit-animation: slideshow 10s linear infinite;
+    animation: slideshow 10s linear infinite;
+}
+
+@keyframes slideshow{
+from  {slideshow-position: 0 0;}
+to {background-position: -1500px 0 ;}
+}
+
+
+
+@-webkit-keyframes containermov {
+    from { -webkit-transform: translateX(800px)translateY(0px); }
+    to   { -webkit-transform:  translateX(-1200px) translateY(0px);  }
+}
+
+@-webkit-keyframes containermov1 {
+    from { -webkit-transform: translateX(700px)translateY(0px); }
+    to   { -webkit-transform:  translateX(-1300px) translateY(0px);  }
+}
+
+@-webkit-keyframes miss1 {
+	0% {-webkit-transform: translate(0px,0px);}
+	25% {-webkit-transform: translate(-300px,100px);}
+	50% {-webkit-transform: translate(400px,200px);}
+    75% {-webkit-transform: translate(-100px,300px);}
+     110% {-webkit-transform: translate(0px,500px);}
+  
+}
+
+
+@-webkit-keyframes fly {
+    from { -webkit-transform: translateX(900px)translateY(0px); }
+    to   { -webkit-transform:  translateX(-1200px) translateY(0);  }
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+<div id="myDIV">
+
+<div id="fly">
+<img src="mario.png" height="100px; width="100px">
+</div>
+
+<div id="containermov">
+<img src="mario1.png" height="100px; width="100px">
+</div>
+
+<div id="containermov1">
+<img src="mario2.png" height="100px; width="100px">
+</div>
+
+<div id="miss1">
+<img src="miss.png" height="35px; width="35px">
+</div>
+
+
+
+
+<div class="tabs">
+    
+   <div class="tab">
+       <input type="radio" id="tab-1" name="tab-group-1" checked>
+       <label for="tab-1">Up</label>
+       
+       <div class="content">
+           <img src="planeicon.png" width="110" height="90" style="transform: translate(0,20px);">
+       </div> 
+   </div>
+    
+   <div class="tab">
+       <input type="radio" id="tab-2" name="tab-group-1">
+       <label for="tab-2">Middle</label>
+       
+       <div class="content">
+			<img src="planeicon2.png" width="110" height="90" style="transform: translate(0,180px);">
+       </div> 
+   </div>
+    
+    <div class="tab">
+       <input type="radio" id="tab-3" name="tab-group-1">
+       <label for="tab-3">Bottom</label>
+     
+       <div class="content">
+          <img src="planeicon3.png" width="110" height="90" style="transform: translate(0,280px);">
+       </div> 
+   </div>
+    
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>
+
+
+
